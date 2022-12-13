@@ -1,0 +1,19 @@
+extends default 
+
+block content 
+    header 
+        a.logo(href='/') Development4Change 
+    .container 
+        div.reports
+            table(style='width:100%', border='1')
+                tr 
+                    th Id 
+                    th Name
+                    th Rating 
+                each report in testingdata  
+                    tr 
+                        td=report.report_id
+                        td=report.report_name
+                        td=report.report_rating
+
+            a.logo(href='/') View/Download Reports

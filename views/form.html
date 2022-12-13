@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+    <head>
+        <link rel="stylesheet" href="/views/css/styles.css">
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content=
+            "width=device-width, initial-scale=1.0">
+        
+        <title>
+            Feedback Survey Form
+        </title>
+    
+    </head>
+    
+    <body>
+        <h1>Feedback Survey</h1>
+    
+        <!-- Create Form -->
+        <form id="form" action="/form" method="POST" onsubmit="return alert('Form submitted!');">
+    
+            <!-- Start Service Provider Used -->
+            <div class="form-control">
+                <label for="scale" id="label-scale">
+                    Service Provider Used:
+                </label> 
+                    
+                <input type="search" list="browsers" name="serviceProvider" required>
+                <datalist id="browsers">
+                    <option value="JSEB Access to Capital">
+                    <option value="Better Business Bureau of Northeast Florida">
+                    <option value="Jacksonville Women's Business Center">
+                    <option value="Procurement Technical Assistance Center (PTAC)">
+                    <option value="SCORE">
+                    <option value="Small Business Development Center (SBDC) at University of North Florida (UNF)">
+                    <option value="Small Business Resource Network">  
+                    <option value="U.S. Small Business Administration">
+                    <option value="Women Business Owners of North Florida">
+                    <option value="Florida Business Development Corporation"> 
+                    <option value="Florida First Capital Finance Corporation (FFCFC)">
+                    <option value="U.S. Small Business Administration">
+                    <option value="Beaver Street Enterprise Center">
+                    <option value="Small Business Workshops at the JAX Chamber's Small Business Center">
+                    <option value="Small Business Workshops at the Small Business Development Center at UNF">
+                    <option value="UNF Small Business Blog - From the Small Business Development Center at the University of North Florida">
+                    <option value="CareerSource">
+                    <option value="Jacksonville Chamber JAX Bridges">
+                    <option value="Nonprofit Center of Northeast Florida">
+                    <option value="Swisher Growth Cohort for Underrepresented Entrepreneurs">
+                    <option value="Jim Moran Institute for Global Entrepreneurship">   
+                </datalist>
+
+                </input>
+                
+            </div>
+            <!-- End Service Provider Used-->
+
+            <!--Start First Visit-->
+            <div class="form-control">
+                <label>
+                    Was this your first visit with this provider?
+                </label>
+
+                <!-- Input Type Radio Button -->
+                <label for="visitYes">
+                    <input type="radio" id="visit-1" name="firstVisit" value="Yes"> 
+                        Yes
+                </label>
+                <label for="VisitNo">
+                    <input type="radio" id="visit-2" name="firstVisit" value="No" required> 
+                        No
+                </label>
+            </div>
+            <!--End First Visit-->
+            
+            <!--Start Service Requested-->
+            <div class="form-control">
+                <label for="servicesRequested">
+                    What service did you request from this provider?
+                </label>
+
+                <!-- multi-line text input control -->
+                <textarea name="servicesRequested" id="servicesRequested" placeholder="Services Requested" required></textarea>
+            </div>
+            <!--End Service Requested-->
+
+            <!--Start Rank Knowledge-->
+            <div class="form-control">
+                <label for="range">
+                    How do you rank the provider's knowledge in this area?
+                </label>
+
+                    <input type="range" name = "rankKnowledge" min="0" max="10" value="5" oninput="rangeValue.innerText = this.value">
+                    <p id="rangeValue">5</p>
+            </div>
+            <!--End Rank Knowledge-->
+
+            <!--Start Timely Manner-->
+            <div class="form-control">
+                <label>
+                    Was the service provided in a timely manner?
+                </label>
+
+                <label for="time1">
+                    <input type="radio" id="time-1" name="timely" value="Extremely timely"required> 
+                    Extremely timely
+                </label>
+                <label for="time2">
+                    <input type="radio" id="time-2" name="timely" value="Very timely"> 
+                    Very timely
+                </label>
+                <label for="time3">
+                    <input type="radio" id="time-3" name="timely" value="Somewhat timely"> 
+                    Somewhat timely
+                </label>
+                <label for="time4">
+                    <input type="radio" id="time-4" name="timely" value="Not so timely"> 
+                    Not so timely
+                </label>
+                <label for="time5">
+                    <input type="radio" id="time-5" name="timely" value="Not at all timely"> 
+                    Not at all timely
+                </label>
+            </div>
+            <!--End Timely Manner-->
+            
+
+            <!--Start Satisfied-->
+            <div class="form-control">
+                <label>
+                    How satisfied were you with the overall service you received?
+                </label>
+
+                <label for="sat1">
+                    <input type="radio" id="sat-1" name="satisfied" value="Very satisfied" required> 
+                    Very satisfied
+                </label>
+                <label for="sat2">
+                    <input type="radio" id="sat-2" name="satisfied" value="Somewhat satisfied"> 
+                    Somewhat satisfied
+                </label>
+                <label for="sat3">
+                    <input type="radio" id="sat-3" name="satisfied" value="Neither satisfied or dissatisfied"> 
+                    Neither satisfied or dissatisfied
+                </label>
+                <label for="sat4">
+                    <input type="radio" id="sat-4" name="satisfied" value="Somewhat dissatisfied"> 
+                    Somewhat dissatisfied
+                </label>
+                <label for="sat5">
+                    <input type="radio" id="sat-5" name="satisfied" value="Very dissatisfied"> 
+                    Very dissatisfied
+                </label>
+            </div>
+            <!--End Satisfied-->
+
+            <!--Start Meet Needs-->
+            <div class="form-control">
+                <label>
+                    How well did the service provider meet your business needs?
+                </label>
+
+                <label for="needs1">
+                    <input type="radio" id="needs-1" name="metNeeds" value="Very much" required> 
+                    Very much
+                </label>
+                <label for="needs2">
+                    <input type="radio" id="needs-2" name="metNeeds" value="Much"> 
+                    Much
+                </label>
+                <label for="needs3">
+                    <input type="radio" id="needs-3" name="metNeeds" value="Somewhat"> 
+                    Somewhat
+                </label>
+                <label for="needs4">
+                    <input type="radio" id="needs-4" name="metNeeds" value="Little"> 
+                    Little
+                </label>
+                <label for="needs5">
+                    <input type="radio" id="needs-5" name="metNeeds" value="Not at all"> 
+                    Not at all
+                </label>
+            </div>
+            <!--End Meet Needs-->
+            
+            <!--Start Comments-->
+            <div class="form-control">
+                <label for="comment">
+                    Any comments or suggestions?
+                </label>
+
+                <!-- multi-line text input control -->
+                <textarea name="comments" id="comment" placeholder="Enter your comment here"></textarea>
+            </div>
+            <!--End Comments-->
+        
+            <!--Submit-->
+                
+            <button type="submit" value="submit">
+                Submit
+            </button>
+
+        </form>
+    </body>
+  
+</html>

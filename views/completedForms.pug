@@ -1,0 +1,71 @@
+//mkdir view
+//touch view/index.pug
+
+doctype html
+html(lang='en')
+  head
+    title Completed Reviews
+    link(rel='stylesheet' href='/views/css/styles2.css')
+    style.
+      table.ui.celled img { display: inline-block; }
+      footer { margin: 35px 0 15px 0; text-align: center }
+    h1.ui.center.aligned.header Completed Reviews
+    //input(type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..")
+    body 
+        main#main
+        .ui.container
+            table.styled-table
+                thead
+                    tr
+                        th Date Created
+                        th Service Provider Used
+                        th First Visit
+                        th Services Requested
+                        th Rank Knowledge
+                        th Timely
+                        th Satisfied
+                        th Met Needs
+                        th Comments
+                tbody
+                    each answer in answersArray
+                        tr
+                            td #{answer.createdDate}
+                            td #{answer.serviceProvider}
+                            td #{answer.firstVisit}
+                            td #{answer.servicesRequested}
+                            td #{answer.rankKnowledge}
+                            td #{answer.timely}
+                            td #{answer.satisfied}
+                            td #{answer.metNeeds}
+                            td #{answer.comments}
+    //script.
+        function myFunction() {
+        // Declare variables
+        var input;
+        var filter;
+        var table;
+        var tr;
+        var td;
+        var i;
+        var txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("styled-table");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+            }
+        }
+        }
+    
+
+

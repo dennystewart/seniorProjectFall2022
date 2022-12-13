@@ -1,0 +1,78 @@
+body {
+    max-width: 500px center;
+    margin: 50px auto;
+    padding: 30px 20px;
+    font-family: Verdana;
+    text-align: center;
+    background: #ffffff;
+    font-size: 14px;
+    line-height: 85%;
+  }
+  .styled-table {
+    border-collapse: collapse;
+    margin: 10px auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 800px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    border: 3px solid #ffffff;
+    border-top: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+
+}
+.styled-table thead tr {
+    background-color:#729097;
+    color: #ffffff;
+    text-align: center;
+    border: 3px solid#729097;
+    border-top: 3px solid #729097;
+    border-bottom: 3px solid #729097;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border: thin solid rgba(0, 0, 0, 0.1);
+    border-bottom: thin solid rgba(0, 0, 0, 1);
+}
+.styled-table tbody tr {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #fafafa;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #3f80d0;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+.styled-table tr {
+    border-bottom: 1px solid #ffffff;
+}
+.styled-table th:active{
+    background-color: #8db9ef;
+}
+
+.inputTxt {
+    font-weight: bold;
+    font-size: 1em;
+    font-family: sans-serif;
+    display: inline-block;
+    display: table;
+    text-align: right;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+#myInput {
+    font-size: 1em;
+    font-family: sans-serif;
+}

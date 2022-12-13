@@ -1,0 +1,37 @@
+
+doctype html
+html(lang='en')
+  head
+    title Opportunities 
+    link(rel='stylesheet' href='/views/css/styles2.css')
+    style.
+      table.ui.celled img { display: inline-block; }
+      footer { margin: 35px 0 15px 0; text-align: center }
+    h1.ui.center.aligned.header Opportunities 
+    body 
+        main#main
+        .ui.container
+            table.styled-table
+                thead
+                    tr
+                        th Date Posted
+                        th Service Provider Name
+                        th Service Required
+                        th Contact Number
+                        th Email
+                        th Time Required
+                        th Date Required
+                        th Location
+                        th Additional Info
+                tbody
+                    each opportunity in opportunities 
+                        tr
+                            td #{opportunity.postedDate}
+                            td #{opportunity.serviceProvider}
+                            td #{opportunity.serviceRequired}
+                            td #{opportunity.contactNumber}
+                            td #{opportunity.email}
+                            td #{opportunity.time}
+                            td #{opportunity.date}
+                            td #{opportunity.location}
+                            td #{opportunity.additionalInfo}

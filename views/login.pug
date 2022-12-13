@@ -1,0 +1,12 @@
+extends default
+
+block content 
+    div.home-search
+        form(class="login" method="POST" action="/api/login")
+            label(for="inputUsername" class="sr-only") Username 
+            input.username(type="email" name="username", placeholder="Email Address", id="inputUsername" required)
+
+            label(for="inputPassword" class="sr-only") Password
+            input.password(type="password" name="password", placeholder="Password", id="inputPassword" required)
+            
+            button(type="submit") Sign in

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+    Create Business Profile
+    </title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+fieldset {
+    display: block;
+    width: 50%;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove (internal value);
+}
+legend {
+    background-color: royalblue;
+    color: white;
+    padding: 5px 10px;
+}
+
+input {
+  margin: 5px;
+}
+        
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -2px;
+    position: relative;
+    background-color: royalblue;
+    content: '';
+    display: inline-block;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -2px;
+    position: relative;
+    background-color: royalblue;
+    content: '';
+    display: inline-block;
+}
+input[type=text], input[type=email], input[type=tel], input[type=url], input[type=date], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: aliceblue;
+    color: black;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: royalblue;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+input[type=reset]:hover {
+    background-color: darkblue;
+}
+input[type=submit]:hover {
+    background-color: darkblue;
+}
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+body {
+    background-color: #94bdc6;
+    font-family: Verdana;
+    text-align: left;
+}
+h1 {
+    color: darkblue;
+    font-family: inherit;
+    text-align: center;
+}
+
+        
+</style>
+</head>
+<body>
+        
+        <div class="container">
+        <div class="my-account"><h1>Create Business Profile</h1></div>
+        <section>
+        <form action="https://..." method="post">
+        <fieldset class="field">
+        <legend><strong>Service Provider Information</strong></legend>
+            
+        <label for="oname">Organization Name:</label>
+        <input type="text" name="fname" id="fname" placeholder="Name of the company..." required><br><br>
+            
+        <label for="cperson">Contact Person Name:</label>
+        <input type="text" name="cperson" id="lname" placeholder="Primary contact person..." required><br><br>
+            
+        <label for="ctitle">Contact Person Title:</label>
+        <input type="text" name="title" id="ctitle" placeholder="Ex: Marketing Lead..." required><br><br>
+            
+        <label for="dept">Department:</label>
+        <input type="text" name="title" id="dept" placeholder="Department name..."><br><br>
+            
+        <label for="email">E-mail Address:</label>
+        <input type="email" name="email" id="email" placeholder="example@example.com" required><br><br>
+            
+        <label for="phone">Phone Number:</label>
+        <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required><br><br>
+            
+        <label for="homepage">Website URL:</label>
+        <input type="url" name="homepage" id="homepage" placeholder="www.example.com" required><br><br>
+            
+        <label for="location">Location (<em>City, State</em>):</label>
+        <input type="text" name="location" id="email" placeholder="Jacksonville, FL" required><br><br>
+            
+        <label for="sdate">Service Start Date:</label>
+        <input type="date" name="sdate" id="bdate" required min="2022-10-01"><br><br>
+        
+        <label for="service" class="myradio">Type of Service:</label>
+            <input type="radio" name="service" value="ts"><a href="https://www.tbd/" target="_blank"> Training Service</a>&nbsp;&nbsp;
+            <input type="radio" name="service" value="ds"><a href="https://www.tbd/" target="_blank"> Direct Service</a>&nbsp;&nbsp;
+            <input type="radio" name="service" value="is"><a href="https://www.tbd/" target="_blank"> Indirect Service</a>&nbsp;&nbsp;
+            <input type="radio" name="service" value="os"><a href="https://www.tbd/" target="_blank"> Other Service</a>
+            <br><br>
+                         
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required><br><br>
+            
+        <label for="password">Confirm Password:</label>
+        <input type="password" name="password" id="password" required><br><br>
+            <br><br>
+    
+        <input type="reset">
+        <input type="submit" value="Submit">
+        </fieldset>
+        <input type="hidden" name="username" value="TBD"/>
+        <input type="hidden" name="to_email_address" value="TBD"/>
+        <input type="hidden" name="to_display_name" value="TBD"/>
+        </form>
+        </section>
+        </div>
+    
+</body>
+</html>

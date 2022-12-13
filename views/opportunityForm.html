@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Header-->
+
+<head>
+    <link rel="stylesheet" href="/views/css/styleNewOpp.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        New Opportunity
+    </title>
+</head>
+
+<!--Body-->
+
+<body>
+    <h1>Create New Opportunity</h1>
+    <form id="form" action="opportunity/form" method="POST" onsubmit="return alert('New Opportunity Posted!');">
+        <!-- Service Provider Name-->
+        <div class="form-control">
+            <label for="scale" id="label-scale">
+                Full Name of Service Provider:
+            </label>
+            <input type="text" id="serviceProvider" name="serviceProvider" required>
+            </input>
+        </div>
+
+        <!--Service Required-->
+        <div class="form-control">
+            <label for="serviceRequired">
+                Type of service/opportunity available:
+            </label>
+            <textarea name="serviceRequired" id="serviceRequired" placeholder="service/opportunity available..."
+                required></textarea>
+        </div>
+
+        <!--Contact Phone Number-->
+        <div class="form-control">
+            <label for="contactNumber">Contact Phone Number:</label>
+            <input type="tel" id="contactNumber" name="contactNumber" required>
+        </div>
+
+        <!--Email Id-->
+        <div class="form-control">
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!--Service Time-->
+        <div class="form-control">
+            <label for="time">Time of Service/Opportunity:</label>
+            <input type="text" id="time" name="time" required>
+        </div>
+
+        <!--Service Date-->
+        <div class="form-control">
+            <label for="date">Date of Service/Opportunity:</label>
+            <input type="text" id="date" name="date" required>
+        </div>
+
+        <!--Service Location-->
+        <div class="form-control">
+            <label for="location">Location of Service/Opportunity:</label>
+            <input type="text" id="location" name="location" required>
+        </div>
+
+        <!--Additional Information-->
+        <div class="form-control">
+            <label for="additionalInfo">Additional Information:</label>
+            <textarea name="additionalInfo" id="additionalInfo"
+                placeholder="Enter any additional Information here..."></textarea>
+        </div>
+
+        <!--Submit Button-->
+        <button type="submit" value="submit">
+            Post Opportunity
+        </button>
+    </form>
+</body>
+
+</html>
